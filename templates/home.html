@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'navbar.html' %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{% block head_title %}{% endblock %}John Evans</title>
+
+    {% load staticfiles %}
+    <!-- <link rel='stylesheet' href='{% static "css/bootstrap.min.css" %}' /> 
+    <link rel='stylesheet' href='{% static "css/bootstrap-theme.min.css" %}' />  -->
+    <link rel='stylesheet' href='{% static "css/home.css" %}' rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+    <style>
+    .nav-link-right:hover{
+        font-family: 'Lobster';
+        font-size: 28px;
+        color: rgb(233,168,85);
+    }
+
+    .nav-link-right{
+        font-family: 'Lobster';
+        font-size: 28px;
+        color: rgb(225,186,134);
+    } 
+
+    .nav-link-left:hover{
+        font-family: 'Lobster';
+        font-size: 28px;
+        color: rgb(233,168,85);
+    }
+
+    .nav-link-left{
+        font-family: 'Lobster';
+        font-size: 28px;
+        color: rgb(225,186,134);
+    } 
+
+    .header .top{
+        font-family: 'Lobster';
+        font-size: 46px;
+        color: inherit;
+    }
+
+    .header .bottom{
+        font-family: 'Lobster';
+        font-size: 18px;
+        color: inherit;
+    }
+
+    .header {
+        color: rgb(223,207,209);
+    }
+
+    .header:hover{
+        color: rgb(243,214,200); 
+    }
+
+        .ghost-button-print{
+            font-family: 'Lobster';
+            color: rgb(223,207,209);
+            font-weight: 400;
+            font-size: 23px;
+            letter-spacing: 1px;
+            transition: .3s ease;
+        }
+
+        .ghost-button-print:hover{
+            font-family: 'Lobster';
+            background-color: rgba(223,207,209,.7);
+            color: rgb(50, 50, 70);
+            font-weight: 400;
+            font-size: 23px;
+            letter-spacing: 1px;
+            transition: .3s ease;
+        }
+
+        html {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-img-holder" style="">
+        <div class="background-fade"><div>
+        
+    </div>
+
+    <div class="jumbotron" style="background:no-repeat center fixed url('{% static 'media/images/stars.jpg' %}');  background-size: cover;">
+        <a href="#">
+            <div class="ghost-button-print">
+                <span>See More Photos</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="container">
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+        <p>some text</p>
+
+    </div>
+
+
+
+</body>
+
+<script type="text/javascript" src='{% static "javascript/home.js" %}'></script>
+
+</html>
+
