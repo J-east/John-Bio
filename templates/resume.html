@@ -1,9 +1,13 @@
-{% include 'navbar-absolute.html' %}
+{% extends "base.html" %}
 
 <!DOCTYPE html>
 <html lang="en">
 
+{% block navbar %}
+    {% include 'navbar-absolute.html' %}
+{% endblock %}
 
+{% block content %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -276,10 +280,33 @@
                 </ul>
             </div>
         </div>     
-
-
-
     </div>
 
+    <div class="affix-navbar">
+        <div class="affix-element-active">
+            <span>Profile</span>
+        </div>
+        <div class="affix-element">
+            <span>Experience</span>
+        </div>
+        <div class="affix-element">
+            <span>Abilities</span>
+        </div>
+        <div class="affix-element">
+            <span>Projects</span>
+        </div>                        
+    </div>
 
 </body>
+{% endblock %}
+
+{% block javascript %}
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src='{% static "js/jquery.min.js" %}'></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="{% static "javascript/resume.js" %}"></script>
+{% endblock %}
+
+
+

@@ -41,17 +41,54 @@ div .jumbotron{
 }
 
 .container1{
+	float:left;
 	position: relative;
 	top: 30px;
 	border: 2px solid rgb(243,214,200);
 	border-radius: 4px;
 	width: 80%;
-	margin-left: 10%;
+	margin-left: 2%;
 	text-align: center;
 	height:auto;
 	background:rgba(230,230,230,.8);
 	z-index: 3;
 	margin-bottom: 20px;
+}
+
+.affix-navbar{
+	float:right;
+	position: relative;
+	top: 30px;
+	border: 2px solid rgb(243,214,200);
+	border-radius: 4px;
+	margin-right:4%;
+	z-index: 3;
+}
+
+.affix-element-active{
+	height: 100px;
+	width: 167px;
+	text-align: center;
+	padding-top:35px;
+	background:rgb(101, 137, 104);"
+}
+
+.affix-element-active span{
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.affix-element{
+	height: 100px;
+	width: 167px;
+	text-align: center;
+	padding-top:35px;
+	background:rgb(22, 22, 22);"
+}
+
+.affix-element span{
+	color: rgb(222,222,222);
+	font-size: 20px;
 }
 
 h1{

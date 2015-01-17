@@ -1,9 +1,12 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html lang="en">
 
-{% include 'navbar.html' %}
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
 
-
+{% block content %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -134,6 +137,6 @@
 </body>
 
 <script type="text/javascript" src='{% static "javascript/home.js" %}'></script>
-
+{% endblock %}
 </html>
 
