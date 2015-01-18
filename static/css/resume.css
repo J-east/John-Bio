@@ -61,8 +61,18 @@ div .jumbotron{
 	top: 30px;
 	border: 2px solid rgb(243,214,200);
 	border-radius: 4px;
-	margin-right:4%;
+	right: calc((100% - 1000px) * .1);
 	z-index: 3;
+}
+
+.affix{
+	position: fixed;
+	top: 30px;
+	right: calc((100% - 1000px) * .1);
+}
+
+.affix-top{
+	display:block;
 }
 
 .affix-element-active{
@@ -114,10 +124,15 @@ p,h2,h3,h4{
 	max-width:1000px;
 }
 
+
+div .ghost-print{
+
+}
+
 div .ghost-button-print{
 	position: absolute;
 	top: 80%;
-	left: 10%;
+	left: 40%;
 	border: 2px solid rgb(223,207,209);
 	border-radius: 4px;
 	height: 60px;
@@ -144,6 +159,20 @@ div .ghost-button-print{
 		width:100%;
 		margin-right: 0;
 		margin-left: 0;
+	}
+
+	.affix-navbar{
+		display:none;
+	}
+
+	.affix{
+		display:none;
+
+	}
+
+	.affix-top{
+		display:none;
+		visibility: hidden;
 	}
 }
 
