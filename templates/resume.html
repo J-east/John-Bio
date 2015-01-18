@@ -99,6 +99,7 @@
             font-size: 23px;
             letter-spacing: 1px;
             transition: .3s ease;
+            cursor: pointer;
         }        
 
         h1{
@@ -134,11 +135,9 @@
     </div>
 
     <div class="jumbotron" style="background:no-repeat center fixed url('{% static 'media/images/stars.jpg' %}');  background-size: cover;">
-        <a href="#">
-            <div class="ghost-button-print">
+            <div class="ghost-button-print" id="resume-but">
                 <span>See Resume</span>
             </div>
-        </a>
     </div>
 
     <div class="background-img-holder">
@@ -146,7 +145,7 @@
         <img class="background-img" src="{% static "media/images/Curly-Grain_1.jpg" %}"> 
     </div>
 
-    <div class="container1">
+    <div class="container1" id="resume-body">
 
         <div class="row" id="profile" style="padding-top:20px;">
             <div class="col-sm-4">
