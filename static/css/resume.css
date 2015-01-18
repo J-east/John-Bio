@@ -75,19 +75,6 @@ div .jumbotron{
 	display:block;
 }
 
-.affix-element-active{
-	height: 100px;
-	width: 167px;
-	text-align: center;
-	padding-top:35px;
-	background:rgb(101, 137, 104);"
-}
-
-.affix-element-active span{
-	font-size: 20px;
-	font-weight: 700;
-}
-
 .affix-element{
 	height: 100px;
 	width: 167px;
@@ -99,6 +86,15 @@ div .jumbotron{
 .affix-element span{
 	color: rgb(222,222,222);
 	font-size: 20px;
+}
+
+.active{
+	background:rgb(101, 137, 104);"
+}
+
+.active span{
+	color: rgb(20,20,20);
+	font-weight: 700;
 }
 
 h1{
