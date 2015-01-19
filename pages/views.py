@@ -6,7 +6,7 @@ from django.contrib import messages
 # Create your views here.
 
 def home(request):
-	template = 'home.html'
+	template = 'resume.html'
 	context = {}
 	return render(request, template, context)
 

@@ -23,7 +23,7 @@
     <link rel='stylesheet' href='{% static "css/bootstrap-theme.min.css" %}' />  -->
     
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -32,6 +32,10 @@
     <style>
         html {
             background-color: rgb(210,205,200);
+        }
+
+        span{
+            font-family: 'Merriweather Sans', sans-serif;
         }
 
         .nav-bar{
@@ -83,24 +87,31 @@
         }
 
         .ghost-button-print{
-            font-family: 'Lobster';
-            color: rgb(223,207,209);
+            font-family: 'Merriweather Sans', sans-serif;
+            color: rgb(256,256,256);
             font-weight: 400;
             font-size: 23px;
             letter-spacing: 1px;
-            transition: .3s ease;
+            transition: .5s ease;
         }
 
         .ghost-button-print:hover{
-            font-family: 'Lobster';
+            font-family: 'Merriweather Sans', sans-serif;
             background-color: rgba(223,207,209,.7);
-            color: rgb(50, 50, 70);
+            color: rgb(20, 20, 30);
             font-weight: 400;
             font-size: 23px;
             letter-spacing: 1px;
             transition: .1s ease;
             cursor: pointer;
         } 
+
+        .ghost-text-print{
+            font-family: 'Merriweather Sans', sans-serif;
+            font-weight: 400;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
 
         .affix-element:hover{
             transition: .1s ease;
@@ -115,11 +126,16 @@
         } 
 
         h1{
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Merriweather Sans', sans-serif;
         }
 
-        p,h2,h3,h4{
-            font-family: 'Roboto', sans-serif;
+        p,h2,h3,h4, li{
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        li{
+            margin-right:5px;
+            font-size: 14px;
         }
 
         p{
@@ -147,6 +163,10 @@
     </div>
 
     <div class="jumbotron" style="background:no-repeat center fixed url('{% static 'media/images/stars.jpg' %}');  background-size: cover;">
+            <div class="ghost-text-print">
+                <p>Keep your eyes on the stars and your feet on the ground</p>
+                <p style="font-family: 'Lobster';font-size: 32px;">-Theodore Roosevelt</p>
+            </div>
             <div class="ghost-button-print" id="resume-but">
                 <span>See Resume</span>
             </div>

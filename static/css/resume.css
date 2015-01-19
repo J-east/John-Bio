@@ -120,26 +120,42 @@ p,h2,h3,h4{
 	max-width:1000px;
 }
 
-
-div .ghost-print{
-
-}
-
 div .ghost-button-print{
 	position: absolute;
-	top: 80%;
-	left: 40%;
-	border: 2px solid rgb(223,207,209);
+	top: calc((100% - 60px) * .85);
+	left: calc((100% - 365px) * .14);
+	border: 2px solid rgb(256,256,256);
 	border-radius: 4px;
 	height: 60px;
-	width: 265px;
+	width: 365px;
 	text-align: center;
+	background: rgba(0,0,0,.4);
 }
 
 .ghost-button-print span{
 	position: relative;
 	color: inherit;
-	top:14px;
+	top:12px;
+}
+
+div .ghost-text-print{
+	position: absolute;
+	top: 35%;
+	left: calc((100% - 500px) * .1);
+	box-shadow: 0 0 45px 45px rgba(0,0,0,.2);
+	border-radius: 4px;
+	height: 230px;
+	width: 500px;
+	color: rgb(240,240,240);
+	background: rgba(0,0,0,.2);
+}
+
+.ghost-text-print p{
+	text-align: left;
+	position: relative;
+	color: inherit;
+	top:12px;
+	font-size: inherit;
 }
 
 @media screen and (max-width: 1000px) {
@@ -152,7 +168,7 @@ div .ghost-button-print{
 
 @media screen and (max-width: 750px) {
 	.container1{
-		width:100%;
+		width:98%;
 		margin-right: 0;
 		margin-left: 0;
 	}
@@ -163,7 +179,6 @@ div .ghost-button-print{
 
 	.affix{
 		display:none;
-
 	}
 
 	.affix-top{
