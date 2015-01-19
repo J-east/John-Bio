@@ -20,15 +20,15 @@ $('#profile-but').click(function() {
 	});
 });
 
-$('#resume-but').click(function() {
+$('#work-but').click(function() {
 	$('html,body').animate({
-   		scrollTop: $("#resume-body").offset().top - 30
+   		scrollTop: $("#work").offset().top - 5
 	});
 });
 
-$('#resume-but').click(function() {
+$('#education-but').click(function() {
 	$('html,body').animate({
-   		scrollTop: $("#resume-body").offset().top - 30
+   		scrollTop: $("#education").offset().top - 5
 	});
 });
 
@@ -41,7 +41,7 @@ $('#resume-but').click(function() {
 
 function isScrolledIntoView(elem)
 {
-    var docViewTop = $(window).scrollTop()+30;
+    var docViewTop = $(window).scrollTop()+35;
 
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
@@ -53,25 +53,25 @@ $(window).scroll(function() {
 		if (isScrolledIntoView('#profile')){
 			$('#profile-but').addClass('active');
 			$('#work-but').removeClass('active');
-			$('#abilities-but').removeClass('active');
+			$('#education-but').removeClass('active');
 			$('#projects-but').removeClass('active');
 		}
 		if (isScrolledIntoView('#work')){
 			$('#profile-but').removeClass('active');
 			$('#work-but').addClass('active');
-			$('#abilities-but').removeClass('active');
+			$('#education-but').removeClass('active');
 			$('#projects-but').removeClass('active');
 		}
-		if (isScrolledIntoView('#abilities')){
+		if (isScrolledIntoView('#education')){
 			$('#profile-but').removeClass('active');
 			$('#work-but').removeClass('active');
-			$('#abilities-but').addClass('active');
+			$('#education-but').addClass('active');
 			$('#projects-but').removeClass('active');
 		}
 		if (isScrolledIntoView('#projects')){
 			$('#profile-but').removeClass('active');
 			$('#work-but').removeClass('active');
-			$('#abilities-but').removeClass('active');
+			$('#education-but').removeClass('active');
 			$('#projects-but').addClass('active');
 		}
 	});

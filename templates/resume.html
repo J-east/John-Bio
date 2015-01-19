@@ -98,9 +98,21 @@
             font-weight: 400;
             font-size: 23px;
             letter-spacing: 1px;
-            transition: .3s ease;
+            transition: .1s ease;
             cursor: pointer;
-        }        
+        } 
+
+        .affix-element:hover{
+            transition: .1s ease;
+            background:rgba(2, 2, 2, .95);
+            cursor: pointer;
+        }      
+
+        .active:hover{
+            transition: .1s ease;
+            background:rgba(101, 137, 104, .95);
+            cursor: pointer;
+        } 
 
         h1{
             font-family: 'Roboto', sans-serif;
@@ -146,12 +158,11 @@
     </div>
 
     <div class="container1" id="resume-body">
-
         <div class="row" id="profile" style="padding-top:20px;">
             <div class="col-sm-4">
                 <h3 style="margin-top:40px;">Objective:</h3>
                 <p>
-                    To work for a company in developing and maintaining contemporary technology.  I am a hard worker, a self starter, I take direction with a positive attitude and I work well with others.
+                    I am quality obsessed, a self-starter who takes direction with a positive attitude and works well with others. When I start a task, I intend to produce something that exceeds expectations.
                 </p>
             </div>
             <div class="col-sm-4">
@@ -167,120 +178,185 @@
                 <p>Jacksonville, Florida, USA</p>
             </div>
         </div>
-        <h3>Education:</h3>
+        
+        <hr size="3" style="height: 1px;border: 0; border-top: 3px solid rgb(20,20,20);margin-left:20px;margin-right:20px;margin-bottom:15px;"/>
+        <div id="work">
+            <h3>Expierience:</h3>
 
-        <div class="row" id="education">
-            <div class="col-sm-4">
-                <h4>Tufts University</h4>
-                <p>September 2008 - May 2013</p>
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Landstar Supplychain Solutions</h4>
+                    <p>October 2014 - December 2014</p>
+                    <p>Jacksonville, FL</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Paid Internship in Software Development</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Became familiar with the development process within a corporate environment</li>
+                        <li>Developed in ASP.NET MVC</li>
+                        <li>Increased skills in HTML 5, CSS 3, and jQuery by a huge margin</li>
+                        <li>Completed and presented a ui prototype for a validation screen</li>
+                    </ul>
+                </div>
+            </div> 
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Reflex USA Ltd.</h4>
+                    <p>October 2014 - December 2014</p>
+                    <p>Kowloon, Hong Kong</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Production Manager and Director of Photography</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Directed photography for a documentary and  Wall Street Journal Piece about art restoration and national identity in Bhutan.</li>
+                        <li>Planned logistics for filming in Bhutan and Hong Kong</li>
+                    </ul>
+                </div>
+            </div> 
+
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom:10px;">
+                    <h4>Tufts University Usability Lab</h4>
+                    <p>May 2012 - August 2012</p>
+                    <p>Tufts University, Medford MA</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Human Factors Engineering Intern</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Build a triple-screen flight simulator</li>
+                        <li>Learned aspects of aviation safety and operation</li>
+                        <li>Tested programs designed to prevent accidents on airport runways</li>
+                    </ul>
+                </div>
+            </div>  
+
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom:10px;">
+                    <h4>KSEA, Bucks Harbor, Peirs Park</h4>
+                    <p>Summers: 2009-2013</p>
+                    <p>KSEA: Blue Hill, ME; BHYC: Brooksville, ME; Peirs Park: East Boston, MA</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Sailing Coach</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Coached a Junior Olympic sailing team</li>
+                        <li>Trained and managed other instructors and coaches</li>
+                        <li>Communicated effectively</li>
+                        <li>Lead a team of individuals to victory</li>
+
+                    </ul>
+                </div>
+            </div>               
+
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom:10px;">
+                    <h4>Cold Spring Harbor Labs</h4>
+                    <p>Spring 2007</p>
+                    <p>Cold Spring Harbor, NY</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Lab Assistant</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Assisted in a leading edge bioengineering experiment</li>
+                        <li>Developed excel macros in order to process data</li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+
+        <hr size="3" style="height: 1px;border: 0; border-top: 3px solid rgb(20,20,20);margin-left:20px;margin-right:20px;margin-bottom:15px;"/>
+        
+        <div id="education">
+            <h3 id='education'>Education:</h3>
+
+            <div class="row" id="education">
+                <div class="col-sm-4">
+                    <h4>Tufts University</h4>
+                    <p>September 2008 - May 2013</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Bachelor of Science in Human Factors Engineering</h4>
+                    <p>The major focused on optimizing the design of machines and interfaces for human use</p>
+                </div>
             </div>
-            <div class="col-sm-8">
-                <h4>Bachelor of Science in Human Factors Engineering</h4>
-                <p>The major focused on optimizing the design of machines and interfaces for human use</p>
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Justin Mitchel</h4>
+                    <p>Fall 2014</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Coding for Entrepreneurs: Ecommerce</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned all the skills necessary to design and host a fully functioning small business website</li>
+                        <li>Learned programming in Python, Django, Html 5, css3, Ajax, json, jQuery, JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+
+             <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Professor Dan Hannon</h4>
+                    <p>Fall 2012 - Spring 2013</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Human Factors Capstone Project</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned all the skills necessary to design and host a fully functioning small business website</li>
+                        <li>Learned programming in Python, Django, Html 5, css3, Ajax, json, jQuery, JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Professor Sam Guyer</h4>
+                    <p>Spring 2012</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Data Structures in C++</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned the science behind how databases are created and managed</li>
+                        <li>Wrote relational database search algorithms in C++</li>
+                    </ul>
+                </div>
+            </div>          
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Professor Rob Jacob</h4>
+                    <p>Fall 2012</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>User Interface Design and Programming in Java</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned how to handle user events in an interface</li>
+                        <li>Wrote an application in Java centered around a clear and well-designed GUI</li>
+                    </ul>
+                </div>
+            </div>                    
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Professor Amy Hirschfeld</h4>
+                    <p>Spring 2013</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Technical and Managerial Communication</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned how to communication technical ideas and data in a clear, efficient way</li>
+                        <li>Gained confidence in my command of language</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <hr size="3" style="height: 1px;border: 0; border-top: 3px solid rgb(20,20,20);margin-left:20px;margin-right:20px;margin-bottom:5px;"/>
-        <h3 id="work">Expierience:</h3>
 
-        <div class="row" style="margin-bottom:10px;">
-            <div class="col-sm-4">
-                <h4>Landstar Supplychain Solutions:</h4>
-                <p>October 2014 - December 2014</p>
-                <p>Jacksonville, FL</p>
-            </div>
-            <div class="col-sm-8">
-                <h4>Paid Internship in Software Development</h4>
-                <ul style="text-align:left;font-size:15px;">
-                    <li>Became familiar with the development process within a corporate environment</li>
-                    <li>Developed in ASP.NET MVC</li>
-                    <li>Increased skills in HTML 5, CSS 3, and jQuery by a huge margin</li>
-                    <li>Completed and presented a ui prototype for a validation screen</li>
-                </ul>
-            </div>
-        </div> 
+        <div style="height : 600px">
 
-        <div class="row" style="margin-bottom:10px;">
-            <div class="col-sm-4">
-                <h4>Reflex USA Ltd.:</h4>
-                <p>October 2014 - December 2014</p>
-                <p>Kowloon, Hong Kong</p>
-            </div>
-            <div class="col-sm-8">
-                <h4>Production Manager and Director of Photography</h4>
-                <ul style="text-align:left;font-size:15px;">
-                    <li>Directed photography for a documentary and  Wall Street Journal Piece about art restoration and national identity in Bhutan.</li>
-                    <li>Planned logistics for filming in Bhutan and Hong Kong</li>
-                </ul>
-            </div>
-        </div> 
+        </div>
 
-        <div class="row">
-            <div class="col-sm-4" style="margin-bottom:10px;">
-                <h4>Tufts University Usability Lab:</h4>
-                <p>May 2012 - August 2012</p>
-                <p>Tufts University, Medford MA</p>
-            </div>
-            <div class="col-sm-8">
-                <h4>Human Factors Engineering Intern</h4>
-                <ul style="text-align:left;font-size:15px;">
-                    <li>Build a triple-screen flight simulator</li>
-                    <li>Learned aspects of aviation safety and operation</li>
-                    <li>Tested programs designed to prevent accidents on airport runways</li>
-                </ul>
-            </div>
-        </div>  
 
-        <div class="row">
-            <div class="col-sm-4" style="margin-bottom:10px;">
-                <h4>KSEA, Bucks Harbor, Peirs Park:</h4>
-                <p>Summers: 2009-2013</p>
-                <p>KSEA: Blue Hill, ME; BHYC: Brooksville, ME; Peirs Park: East Boston, MA</p>
-            </div>
-            <div class="col-sm-8">
-                <h4>Sailing Coach</h4>
-                <ul style="text-align:left;font-size:15px;">
-                    <li>Coached a Junior Olympic sailing team</li>
-                    <li>Trained and managed other instructors and coaches</li>
-                    <li>Communicated effectively</li>
-                    <li>Lead a team of individuals to victory</li>
-
-                </ul>
-            </div>
-        </div>               
-
-        <div class="row">
-            <div class="col-sm-4" style="margin-bottom:10px;">
-                <h4>Cold Spring Harbor Labs:</h4>
-                <p>Spring 2007</p>
-                <p>Cold Spring Harbor, NY</p>
-            </div>
-            <div class="col-sm-8">
-                <h4>Lab Assistant</h4>
-                <ul style="text-align:left;font-size:15px;">
-                    <li>Assisted in a leading edge bioengineering experiment</li>
-                    <li>Developed excel macros in order to process data</li>
-                </ul>
-            </div>
-        </div>  
-
-        <hr size="3" style="height: 1px;border: 0; border-top: 3px solid rgb(20,20,20);margin-left:20px;margin-right:20px;margin-bottom:5px;"/>
-        <h3 id="courses">Relevent Courses:</h3>
-        <div class="row" style="margin-bottom:10px;">
-            <div class="col-sm-4">
-                <h4>Landstar Supplychain Solutions:</h4>
-                <p>October 2014 - December 2014</p>
-                <p>Jacksonville, FL</p>
-            </div>
-            <div class="col-sm-8">
-                <h4>Paid Internship in Software Development</h4>
-                <ul style="text-align:left;font-size:15px;">
-                    <li>Became familiar with the development process within a corporate environment</li>
-                    <li>Developed in ASP.NET MVC</li>
-                    <li>Increased skills in HTML 5, CSS 3, and jQuery by a huge margin</li>
-                    <li>Completed and presented a ui prototype for a validation screen</li>
-                </ul>
-            </div>
-        </div>     
     </div>
 
     <div class="affix-navbar" id="navbar-affix">
@@ -290,8 +366,8 @@
         <div id="work-but" class="affix-element">
             <span>Experience</span>
         </div>
-        <div id="abilities-but" class="affix-element">
-            <span>Abilities</span>
+        <div id="education-but" class="affix-element">
+            <span>Education</span>
         </div>
         <div id="projects-but" class="affix-element">
             <span>Projects</span>

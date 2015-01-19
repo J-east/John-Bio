@@ -80,7 +80,7 @@ div .jumbotron{
 	width: 167px;
 	text-align: center;
 	padding-top:35px;
-	background:rgba(22, 22, 22, .8);"
+	background:rgba(22, 22, 22, .8);
 }
 
 .affix-element span{
@@ -89,7 +89,7 @@ div .jumbotron{
 }
 
 .active{
-	background:rgba(101, 137, 104, .6);"
+	background:rgba(101, 137, 104, .6);
 }
 
 .active span{
