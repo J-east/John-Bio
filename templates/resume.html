@@ -1,0 +1,409 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% block navbar %}
+    {% include 'navbar-absolute.html' %}
+{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{% block head_title %}{% endblock %}John Evans</title>
+
+    {% load staticfiles %}
+    <!-- <link rel='stylesheet' href='{% static "css/bootstrap.min.css" %}' /> 
+    <link rel='stylesheet' href='{% static "css/bootstrap-theme.min.css" %}' />  -->
+    
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <link rel='stylesheet' href='{% static "css/resume.css" %}' rel="stylesheet" />
+
+    <style>
+        html {
+            background-color: rgb(210,205,200);
+        }
+
+        span{
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        .nav-bar{
+            background: rgba(101, 137, 104, .6) !important;
+        }
+
+        .nav-link-right:hover{
+            font-family: 'Lobster';
+            font-size: 28px;
+            color: rgb(233,168,85);
+        }
+
+        .nav-link-right{
+            font-family: 'Lobster';
+            font-size: 28px;
+            color: rgb(235,195,164);
+        } 
+
+        .nav-link-left:hover{
+            font-family: 'Lobster';
+            font-size: 28px;
+            color: rgb(233,168,85);
+        }
+
+        .nav-link-left{
+            font-family: 'Lobster';
+            font-size: 28px;
+            color: rgb(225,186,134);
+        } 
+
+        .header .top{
+            font-family: 'Lobster';
+            font-size: 46px;
+            color: inherit;
+        }
+
+        .header .bottom{
+            font-family: 'Lobster';
+            font-size: 18px;
+            color: inherit;
+        }
+
+        .header {
+            color: rgb(243,214,200);
+        }
+
+        .header:hover{
+            color: rgb(223,194,180); 
+        }
+
+        .ghost-button-print{
+            font-family: 'Merriweather Sans', sans-serif;
+            color: rgb(256,256,256);
+            font-weight: 400;
+            font-size: 23px;
+            letter-spacing: 1px;
+            transition: .5s ease;
+        }
+
+        .ghost-button-print:hover{
+            font-family: 'Merriweather Sans', sans-serif;
+            background-color: rgba(223,207,209,.7);
+            color: rgb(20, 20, 30);
+            font-weight: 400;
+            font-size: 23px;
+            letter-spacing: 1px;
+            transition: .1s ease;
+            cursor: pointer;
+        } 
+
+        .ghost-text-print{
+            font-family: 'Merriweather Sans', sans-serif;
+            font-weight: 400;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        .affix-element:hover{
+            transition: .1s ease;
+            background:rgba(2, 2, 2, .95);
+            cursor: pointer;
+        }      
+
+        .active:hover{
+            transition: .1s ease;
+            background:rgba(101, 137, 104, .95);
+            cursor: pointer;
+        } 
+
+        h1{
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        p,h2,h3,h4, li{
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        li{
+            margin-right:5px;
+            font-size: 14px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        h3{
+            font-weight: 700;
+        }
+
+        h4{
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="background-img-holder">
+        <div class="background-fade" style="border-width:0;"><div> 
+    </div>
+
+    <div class="jumbotron" style="background:no-repeat center fixed url('{% static 'media/images/stars.jpg' %}');  background-size: cover;">
+            <div class="ghost-text-print">
+                <p>Keep your eyes on the stars and your feet on the ground</p>
+                <p style="font-family: 'Lobster';font-size: 32px;">-Theodore Roosevelt</p>
+            </div>
+            <div class="ghost-button-print" id="resume-but">
+                <span>See Resume</span>
+            </div>
+    </div>
+
+    <div class="background-img-holder">
+        <div class="background-fade"></div>
+        <img class="background-img" src="{% static "media/images/Curly-Grain_1.jpg" %}"> 
+    </div>
+
+    <div class="container1" id="resume-body">
+        <div class="row" id="profile" style="padding-top:20px;">
+            <div class="col-sm-4">
+                <h3 style="margin-top:40px;">Objective:</h3>
+                <p>
+                    I am quality obsessed, a self-starter who takes direction with a positive attitude and works well with others. When I start a task, I intend to produce something that exceeds expectations.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <div style="margin-top:5px;margin-bottom:-10px;">
+                    <img src="{% static 'media/images/_MG_8671.png' %}" style="max-width:100%;height:auto;">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3 style="margin-top:40px;">Details:</h3>
+                <p style="font-weight:700;">Name:</p>
+                <p>John Evans</p>
+                <p style="font-weight:700;">Location:</p>
+                <p>Jacksonville, Florida, USA</p>
+            </div>
+        </div>
+        
+        <hr size="3" style="height: 1px;border: 0; border-top: 3px solid rgb(20,20,20);margin-left:20px;margin-right:20px;margin-bottom:15px;"/>
+        <div id="work">
+            <h3>Expierience:</h3>
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Landstar Supplychain Solutions</h4>
+                    <p>October 2014 - December 2014</p>
+                    <p>Jacksonville, FL</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Paid Internship in Software Development</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Became familiar with the development process within a corporate environment</li>
+                        <li>Developed in ASP.NET MVC</li>
+                        <li>Increased skills in HTML 5, CSS 3, and jQuery by a huge margin</li>
+                        <li>Completed and presented a ui prototype for a validation screen</li>
+                    </ul>
+                </div>
+            </div> 
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Reflex USA Ltd.</h4>
+                    <p>October 2014 - December 2014</p>
+                    <p>Kowloon, Hong Kong</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Production Manager and Director of Photography</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Directed photography for a documentary and  Wall Street Journal Piece about art restoration and national identity in Bhutan.</li>
+                        <li>Planned logistics for filming in Bhutan and Hong Kong</li>
+                    </ul>
+                </div>
+            </div> 
+
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom:10px;">
+                    <h4>Tufts University Usability Lab</h4>
+                    <p>May 2012 - August 2012</p>
+                    <p>Tufts University, Medford MA</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Human Factors Engineering Intern</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Build a triple-screen flight simulator</li>
+                        <li>Learned aspects of aviation safety and operation</li>
+                        <li>Tested programs designed to prevent accidents on airport runways</li>
+                    </ul>
+                </div>
+            </div>  
+
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom:10px;">
+                    <h4>KSEA, Bucks Harbor, Peirs Park</h4>
+                    <p>Summers: 2009-2013</p>
+                    <p>KSEA: Blue Hill, ME; BHYC: Brooksville, ME; Peirs Park: East Boston, MA</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Sailing Coach</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Coached a Junior Olympic sailing team</li>
+                        <li>Trained and managed other instructors and coaches</li>
+                        <li>Communicated effectively</li>
+                        <li>Lead a team of individuals to victory</li>
+
+                    </ul>
+                </div>
+            </div>               
+
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom:10px;">
+                    <h4>Cold Spring Harbor Labs</h4>
+                    <p>Spring 2007</p>
+                    <p>Cold Spring Harbor, NY</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Lab Assistant</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Assisted in a leading edge bioengineering experiment</li>
+                        <li>Developed excel macros in order to process data</li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+
+        <hr size="3" style="height: 1px;border: 0; border-top: 3px solid rgb(20,20,20);margin-left:20px;margin-right:20px;margin-bottom:15px;"/>
+        
+        <div id="education">
+            <h3 id='education'>Education:</h3>
+
+            <div class="row" id="education">
+                <div class="col-sm-4">
+                    <h4>Tufts University</h4>
+                    <p>September 2008 - May 2013</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Bachelor of Science in Human Factors Engineering</h4>
+                    <p>The major focused on optimizing the design of machines and interfaces for human use</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Justin Mitchel</h4>
+                    <p>Fall 2014</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Coding for Entrepreneurs: Ecommerce</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned all the skills necessary to design and host a fully functioning small business website</li>
+                        <li>Learned programming in Python, Django, Html 5, css3, Ajax, json, jQuery, JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+
+             <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Professor Dan Hannon</h4>
+                    <p>Fall 2012 - Spring 2013</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Human Factors Capstone Project</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned all the skills necessary to design and host a fully functioning small business website</li>
+                        <li>Learned programming in Python, Django, Html 5, css3, Ajax, json, jQuery, JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Professor Sam Guyer</h4>
+                    <p>Spring 2012</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Data Structures in C++</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned the science behind how databases are created and managed</li>
+                        <li>Wrote relational database search algorithms in C++</li>
+                    </ul>
+                </div>
+            </div>          
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Professor Rob Jacob</h4>
+                    <p>Fall 2012</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>User Interface Design and Programming in Java</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned how to handle user events in an interface</li>
+                        <li>Wrote an application in Java centered around a clear and well-designed GUI</li>
+                    </ul>
+                </div>
+            </div>                    
+
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-sm-4">
+                    <h4>Professor Amy Hirschfeld</h4>
+                    <p>Spring 2013</p>
+                </div>
+                <div class="col-sm-8">
+                    <h4>Technical and Managerial Communication</h4>
+                    <ul style="text-align:left;font-size:15px;">
+                        <li>Learned how to communication technical ideas and data in a clear, efficient way</li>
+                        <li>Gained confidence in my command of language</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="height : 600px">
+
+        </div>
+
+
+    </div>
+
+    <div class="affix-navbar" id="navbar-affix">
+        <div id="profile-but" class="affix-element">
+            <span>Profile</span>
+        </div>
+        <div id="work-but" class="affix-element">
+            <span>Experience</span>
+        </div>
+        <div id="education-but" class="affix-element">
+            <span>Education</span>
+        </div>
+        <div id="projects-but" class="affix-element">
+            <span>Projects</span>
+        </div>                        
+    </div>
+
+</body>
+{% endblock %}
+
+{% block javascript %}
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="{% static "javascript/resume.js" %}"></script>
+{% endblock %}
+
+
+

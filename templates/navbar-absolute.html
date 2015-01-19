@@ -1,0 +1,58 @@
+{% block navbar-absolute %}
+
+    {% load staticfiles %}
+    <!-- <link rel='stylesheet' href='{% static "css/bootstrap.min.css" %}' /> 
+    <link rel='stylesheet' href='{% static "css/bootstrap-theme.min.css" %}' />  -->
+    <link rel='stylesheet' href='{% static "css/navbar_absolute.css" %}' rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+<style>
+    
+</style>
+
+
+
+<div class="nav-bar">
+
+        <div class="nav-link-right-spacer"></div>
+
+        <a href='{% url "home" %}'>
+            <div class="header">
+                <span class="top">John Evans</span>
+                <span class="bottom">Designer, Photographer, Filmmaker</span>
+            </div>
+        </a>
+
+        <a href='#'>
+            <div class="nav-link-right">
+                <span>Music</span>
+            </div>
+        </a>
+
+        <a href='#'>
+            <div class="nav-link-right">
+                <span>Web-Design</span>
+            </div>
+        </a>
+        <a href='#'>
+            <div class="nav-link-right">
+                <span>Projects</span>
+            </div>
+        </a>
+        <a href='#'>
+            <div class="nav-link-right">
+                <span>Photos</span>
+            </div>
+        </a>
+        <a href='#'>
+            <div class="nav-link-right">
+                <span>Film</span>
+            </div>
+        </a>
+
+
+    </div>
+
+
+
+{% endblock %}

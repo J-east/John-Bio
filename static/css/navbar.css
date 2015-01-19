@@ -1,0 +1,86 @@
+.nav-bar{
+	position: fixed;
+	top: 10px;
+	left: 0;
+	height: auto;
+	width: 100%;
+	border-bottom: 2px solid rgba(170, 120, 62, .7);
+	border-top: 2px solid rgba(170, 120, 62, .7);
+	background: rgba(55, 92, 130, .7);
+	z-index: 10;
+}
+
+div .nav-link-left{
+	margin-left: 60px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+div .header{
+	margin-left: 40px;
+	display: inline-block;
+	float: left;
+	height: 60px;
+	white-space: nowrap;
+	overflow: hidden;
+	width:320px;
+}
+
+div .nav-link-right{
+	margin-right: 30px;
+	display: inline-block;
+	float: right;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+div .nav-link-right-spacer{
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width: calc((100% - 600px) * .1);
+}
+
+.nav-link-left span{
+	top: 20px;
+	width: auto;
+	position: relative;
+	height:100%;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+.nav-link-right span{
+	width: auto;
+	position: relative;
+	height:100%;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+.header .top{
+	top: -10px;
+	width: auto;
+	position: relative;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+.header .bottom{
+	top: 6px;
+	right:160px;
+	width: auto;
+	position: relative;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+
