@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).ancestor(3)
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = ""
+SECRET_KEY = "234089gh3459ghsej85$%^WWgwhw4t42345$%%"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ["www.johnevans.bio", "johnevans.bio"]
 
@@ -73,7 +73,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'personal_db',
 	'USER': 'johnevans',
-	'PASSWORD': '',
+	'PASSWORD': 'factionknockout',
     }
 }
 

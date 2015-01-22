@@ -23,25 +23,16 @@ BASE_DIR = Path(__file__).ancestor(3)
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open("johnBio/settings/secrets.json") as f:
-    secrets = json.loads(f.read())
-
-def get_secret(setting, secrets=secrets):
-    try:
-        return secrets[setting]
-    except KeyError:
-        error_msg = "set the {0} environment variable".format(setting)
-        raise ImproperlyConfigured(error_msg)
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = get_secret("SECRET_KEY")
+SECRET_KEY = "eorijegoihawoihwrg#^@$2356723423565#$%#^@7"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.johnevans.bio", "johnevans.bio"]
 
 
 # Application definition
@@ -70,14 +61,19 @@ ROOT_URLCONF = 'johnBio.urls'
 
 WSGI_APPLICATION = 'johnBio.wsgi.application'
 
+ADMINS = (
+	('John Evans', 'evans.johnphilip@gmail.com'),
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'personal_db',
+	'USER': 'johnevans',
+	'PASSWORD': 'factionknockout',
     }
 }
 
@@ -108,11 +104,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+STATIC_URL = 'http://johnevans.bio/static/'
+MEDIA_URL = 'http://johnevans.bio/static/media/'
 
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
+MEDIA_ROOT = BASE_DIR.ancestor(2).child('static_media','media')
+STATIC_ROOT = BASE_DIR.ancestor(2).child('static_media')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),

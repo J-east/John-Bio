@@ -1,0 +1,4 @@
+prod.py
+secrets.json
+db.sqlite3
+*.pyc
