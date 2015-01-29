@@ -1,9 +1,7 @@
 """
 Django settings for johnBio project.
-
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
-
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
@@ -11,10 +9,6 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 from unipath import Path
-import json
-
-# normally do not import from django into settings!! improperly configured is the one exception
-from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).ancestor(3)
 
@@ -23,16 +17,14 @@ BASE_DIR = Path(__file__).ancestor(3)
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = "eorijegoihawoihwrg#^@$2356723423565#$%#^@7"
+SECRET_KEY = 'wobw=#b123&zdnixn+@4@8vdn9c7f$8up18w*6h-$nwa7%f-jz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ["www.johnevans.bio", "johnevans.bio"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -61,19 +53,14 @@ ROOT_URLCONF = 'johnBio.urls'
 
 WSGI_APPLICATION = 'johnBio.wsgi.application'
 
-ADMINS = (
-	('John Evans', 'evans.johnphilip@gmail.com'),
-)
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'personal_db',
-	'USER': 'johnevans',
-	'PASSWORD': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -104,11 +91,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = 'http://johnevans.bio/static/'
-MEDIA_URL = 'http://johnevans.bio/static/media/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
-MEDIA_ROOT = BASE_DIR.ancestor(2).child('static_media','media')
-STATIC_ROOT = BASE_DIR.ancestor(2).child('static_media')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
