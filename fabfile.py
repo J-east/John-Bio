@@ -19,7 +19,7 @@ def localhost():
     
 def run_local_server():
     """ Runs local development Django server """
-    local("python manage.py runserver --settings=fc3.settings.dev%(user)s" %env)
+    local("python manage.py runserver --settings=fc3.settings.base")
 
 def provision_local():
     local("pip install requirements/local.txt")
@@ -36,23 +36,19 @@ def staging():
     """use staging server"""
     env.project_name = 'jbStaging'
     env.hosts = ['johnevans.webfactional.com']
-    env.remote_app_dir = '/home/johnevans/webapps/personal_app/%(project_name)s' % (env)
-    env.remote_apache_dir = '/home/johnevans/webapps/personal_app/apache2' % (env)
-    env.remote_lib_dir = '/home/johnevans/webapps/personal_app/lib' % (env)
-    env.activate = 'source /home/johnevans/webapps/personal_app/bin/activate' % (env)
+    env.remote_app_dir = '/home/johnevans/webapps/personal_staging_app/%(project_name)s' % (env)
+    env.remote_apache_dir = '/home/johnevans/webapps/personal_staging_app/apache2' % (env)
+    env.remote_lib_dir = '/home/johnevans/webapps/personal_staging_app/lib' % (env)
+    env.activate = 'source /home/johnevans/webapps/personal_staging_app/bin/activate' % (env)
     env.branch_name = "staging"
 
 def prod():
-    """get info"""
-    env.user = prompt("what is your user name as in <user>@example.webfactional.com?:")
-    """use staging server"""
-    env.project_name = 'fc3staging'
-    env.hosts = ['%(user)s@graham.webfactional.com' % (env)]
-    env.remote_app_dir = '/home/graham/.virtualenvs/%(project_name)s' % (env)
-    env.remote_apache_dir = '/home/graham/webapps/%(project_name)s/apache2' % (env)
-    env.remote_lib_dir = '/home/graham/.virtualenvs/%(project_name)s/lib' % (env)
-    env.git_libs = ['django-mailer-2', 'django-notification']
-    env.activate = 'source /home/graham/.virtualenvs/%(project_name)s/bin/activate' % (env)
+    env.project_name = 'johnBio'
+    env.hosts = ['johnevans.webfactional.com']
+    env.remote_app_dir = '/home/johnevans/webapps/personal_app/%(project_name)s' % (env)
+    env.remote_apache_dir = '/home/johnevans/webapps/personal_app/apache2'
+    env.remote_lib_dir = '/home/johnevans/webapps/personal_app/lib'
+    env.activate = 'source /home/johnevans/webapps/personal_app/bin/activate'
     env.branch_name = "master"
 
 def setup():
@@ -62,9 +58,6 @@ def setup():
         also, please set up the ssh with no password, otherwise this script wont work
     """
     run("easy_install-2.7 pip")
-    run("pip install virtualenv; pip install virtualenvwrapper")
-    run("mkvirtualenv fc3staging")
-    run("workon fc3staging; cdvirtualenv")
     run("pip install -e git+ssh://git@github.com/grahamu/flyingcracker.git#egg=fc3")
     run("cd src/fc3")
     run("git pull origin staging")
@@ -84,14 +77,12 @@ def virtualenv():
             yield
 
 def deploy():
-    run("%(remote_apache_dir)s/bin/stop" % env)
     """Deploy the site."""
     with virtualenv():
-        run("ls")
-        run("git status")
         run('git fetch --all; git reset --hard origin/%(branch_name)s' % env)
-        put("johnBio/settings/secrets.json","%(remote_app_dir)s/src/fc3/fc3/settings" % env)
-    run("%(remote_apache_dir)s/bin/start" % env)
+        put("fc3/settings/secrets.py","%(remote_app_dir)s/%(project_name)s/settings" % env)
+        run("python manage.py collectstatic --settings=johnBio.settings.prod")
+    run("%(remote_apache_dir)s/bin/restart" % env)
 
 def update():
     run("cd %(remote_app_dir)s; git pull origin master" % env)

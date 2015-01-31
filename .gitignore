@@ -1,3 +1,4 @@
+secrets.py
 prod.py
 secrets.json
 db.sqlite3
