@@ -56,7 +56,7 @@ def prod():
 
 @_contextmanager
 def virtualenv():
-    with cd(env.remote_app_dir+"/src/fc3"):
+    with cd(env.remote_app_dir):
         with prefix(env.activate):
             yield
 
