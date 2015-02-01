@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 from unipath import Path
+from secrets import SECRET_KEY
 
 BASE_DIR = Path(__file__).ancestor(4)
 
