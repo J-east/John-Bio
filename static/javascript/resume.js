@@ -32,9 +32,9 @@ $('#education-but').click(function() {
 	});
 });
 
-$('#resume-but').click(function() {
+$('#projects-but').click(function() {
 	$('html,body').animate({
-   		scrollTop: $("#resume-body").offset().top - 30
+   		scrollTop: $("#projects").offset().top - 30
 	});
 });
 
