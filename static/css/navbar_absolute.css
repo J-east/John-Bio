@@ -83,4 +83,8 @@ div .nav-link-right-spacer{
 	color: inherit;
 }
 
-
+@media screen and (max-device-width: 420px) {
+	.header .bottom{
+		right:185px;
+	}
+}
