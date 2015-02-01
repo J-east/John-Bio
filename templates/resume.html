@@ -159,6 +159,20 @@
             font-weight: 700;
         }
 
+        .jumbotron{
+            background:no-repeat center fixed url('{% static 'media/images/stars.jpg' %}');  
+            background-size: cover;
+        }
+
+        @media screen and (max-device-width: 420px) {
+            .jumbotron{
+                display:absolute;
+                background:no-repeat center right fixed url('{% static 'media/images/stars.jpg' %}');  
+                background-height: 100%;
+                height: 100vh;
+            }
+        }
+
     </style>
 
 </head>
@@ -169,7 +183,7 @@
         <div class="background-fade" style="border-width:0;"><div> 
     </div>
 
-    <div class="jumbotron" style="background:no-repeat center fixed url('{% static 'media/images/stars.jpg' %}');  background-size: cover;">
+    <div class="jumbotron" >
             <div class="ghost-text-print">
                 <p>Keep your eyes on the stars and your feet on the ground</p>
                 <p style="font-family: 'Lobster';font-size: 24px;">-Theodore Roosevelt</p>
