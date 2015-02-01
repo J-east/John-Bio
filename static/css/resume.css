@@ -257,10 +257,13 @@ div .ghost-text-print{
 	}
 
 	.jumbotron{
+
+		max-width: 100%;
 		overflow-x:hidden !important;
 	}
 
 	.container1{
+		max-width: 100%;
 		overflow-x:hidden !important;
 	}
 
