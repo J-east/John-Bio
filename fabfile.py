@@ -67,6 +67,7 @@ def deploy():
     with virtualenv():
         run('git fetch --all; git reset --hard origin/%(branch_name)s' % env)
         put("johnBio/settings/secrets.py","%(remote_app_dir)s/%(project_name)s/settings" % env)
+        run("find %(remote_app_dir)s/static -exec touch {} \;" % env)
         run("python manage.py collectstatic --settings=johnBio.settings.%(settings_name)s" % env)
     run("%(remote_apache_dir)s/bin/restart" % env)
 
