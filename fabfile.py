@@ -28,13 +28,14 @@ def provision_staging():
     run("cd %(remote_app_dir)s; pip install requirements/staging.txt")
 
 def provision_production():
-    run("cd %(remote_app_dir)s; pip install requirements/production.txt")
+    run("cd %(remote_app_dir)s; pip install requirements/prod.txt")
 
 def staging():
     # """get info"""
     # env.user = prompt("what is your user name as in <user>@example.webfactional.com?:")
     """use staging server"""
     env.project_name = 'jbStaging'
+    env.settings_name = 'staging'
     env.hosts = ['johnevans.webfactional.com']
     env.remote_app_dir = '/home/johnevans/webapps/personal_staging_app/%(project_name)s' % (env)
     env.remote_apache_dir = '/home/johnevans/webapps/personal_staging_app/apache2' % (env)
@@ -44,6 +45,7 @@ def staging():
 
 def prod():
     env.project_name = 'johnBio'
+    env.settings_name = 'prod'
     env.hosts = ['johnevans.webfactional.com']
     env.remote_app_dir = '/home/johnevans/webapps/personal_app/%(project_name)s' % (env)
     env.remote_apache_dir = '/home/johnevans/webapps/personal_app/apache2'
@@ -65,7 +67,7 @@ def deploy():
     with virtualenv():
         run('git fetch --all; git reset --hard origin/%(branch_name)s' % env)
         put("johnBio/settings/secrets.py","%(remote_app_dir)s/%(project_name)s/settings" % env)
-        run("python manage.py collectstatic --settings=johnBio.settings.prod")
+        run("python manage.py collectstatic --settings=johnBio.settings.%(settings_name)s" % env)
     run("%(remote_apache_dir)s/bin/restart" % env)
 
 def update():
