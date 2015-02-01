@@ -252,7 +252,17 @@ div .ghost-text-print{
 }
 
 @media screen and (max-device-width: 420px) {
-	
+	html{
+		overflow-x:hidden !important;
+	}
+
+	.jumbotron{
+		overflow-x:hidden !important;
+	}
+
+	.container1{
+		overflow-x:hidden !important;
+	}
 
 	div .ghost-text-print{
 		position: absolute;
@@ -263,5 +273,17 @@ div .ghost-text-print{
 		width: 90%;
 		color: rgb(240,240,240);
 		background: rgba(0,0,0,.2);
+	}
+
+	div .ghost-button-print{
+		position: absolute;
+		left: 0px;
+		top: calc((100% - 60px) * .85);
+		border: none;
+		border-top: 2px solid rgb(256,256,256);
+		border-bottom: 2px solid rgb(256,256,256);
+		border-radius: 4px;
+		height: 60px;
+		width: 100%;
 	}
 }
