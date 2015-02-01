@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 from unipath import Path
-
+import json
+from secrets import SECRET_KEY
 
 # normally do not import from django into settings!! improperly configured is the one exception
 from django.core.exceptions import ImproperlyConfigured
