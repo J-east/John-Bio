@@ -164,16 +164,7 @@ div .ghost-text-print{
 		margin-right: 5%;
 		margin-left: 5%;
 	}
-}
-
-@media screen and (max-width: 750px) {
-	.container1{
-		width:98%;
-		margin-right: 0;
-		margin-left: 0;
-	}
-
-	.affix-navbar{
+		.affix-navbar{
 		display:none;
 	}
 
@@ -187,3 +178,51 @@ div .ghost-text-print{
 	}
 }
 
+@media screen and (max-width: 750px) {
+	.container1{
+		width:98%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.affix-navbar{
+		display:none;
+	}
+
+	.affix{
+		display:none;
+	}
+
+	.affix-top{
+		display:none;
+		visibility: hidden;
+	}
+
+}
+
+@media screen and (min-width: 1250px) {
+	.container1{
+		width:1000px;
+		margin-left: calc((100% - 1100px)* .3);
+	}
+	.affix{
+		right: calc((100% - 1200px) * .3);
+	}
+	.affix-top{
+		right: calc((100% - 1200px) * .3);
+	}
+}
+
+@media screen and (min-width: 1450px) {
+	.container1{
+		width:1150px;
+		padding-left: 100px;
+		padding-right: 100px;
+		margin-left: calc((100% - 1100px)* .3);
+	}
+	.affix{
+		right: calc((100% - 1400px) * .3);
+	}
+	.affix-top{
+		right: calc((100% - 1400px) * .3);
+	}
+}
